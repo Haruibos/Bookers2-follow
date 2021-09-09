@@ -18,6 +18,7 @@ class BookCommentsController < ApplicationController
   	book_comment = @book.book_comments.find(params[:id])
 		book_comment.destroy
 		redirect_to request.referer
+		# 特定の処理後、遷移元のURLに戻る（リダイレクトする）
 	end
 
 	private
